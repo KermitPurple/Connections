@@ -20,6 +20,9 @@ function setup(){
 
 function draw(){
 	background(0);
+	if(connections.type() == shapes.CIRCLE){
+		translate(width / 2, height / 2);
+	}
 	connections.draw()
 	noLoop();
 }
@@ -45,8 +48,9 @@ function update_screen(){
 
 function swap_shapes(){
 	if(connections.type() == shapes.SQUARE){
+		connections = new CircleConnections();
 	}else{
 		connections = new SquareConnections();
-		update_screen();
 	}
+	update_screen();
 }
