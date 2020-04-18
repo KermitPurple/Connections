@@ -13,7 +13,7 @@ function setup(){
 	frequency_slider = createSlider(1, 20, 2)
 	frequency_slider.parent('controls')
 	createP("Offset").parent('controls')
-	offset_slider = createSlider(2, 10, 2, 0.3)
+	offset_slider = createSlider(1.1, 5, 2, 0.01)
 	offset_slider.parent('controls')
 	connections = new SquareConnections();
 }
