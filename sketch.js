@@ -12,17 +12,13 @@ function setup(){
 	createCanvas(600, 600).parent('cnvs');
 	stroke(255);
 	createP("Frequency").parent('controls');
-	frequency_slider = createSlider(1, 50, 20);
-	frequency_slider.parent('controls');
+	frequency_slider = createSlider(1, 50, 20).parent('controls');
 	createP("Offset").parent('controls');
-	offset_slider = createSlider(1.1, 5, 2, 0.01);
-	offset_slider.parent('controls');
+	offset_slider = createSlider(1.1, 5, 2, 0.01).parent('controls');
 	connections = new SquareConnections();
-	star_div = createDiv();
-	star_div.parent('controls');
+	star_div = createDiv().parent('controls');
 	createP("Points on star").parent(star_div);
-	star_point_slider = createSlider(1, 15, 5);
-	star_point_slider.parent(star_div);
+	star_point_slider = createSlider(1, 15, 5).parent(star_div);
 	star_div.style('display', 'none');
 }
 
