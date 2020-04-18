@@ -1,7 +1,6 @@
 class Connections{
 	constructor(frequency){
 		this.frequency = frequency;
-		this.points = [];
 	}
 
 	draw_points(){
