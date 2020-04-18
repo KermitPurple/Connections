@@ -19,4 +19,8 @@ class SquareConnections extends Connections{
 			this.points.push(createVector(20, i))
 		}
 	}
+
+	type(){
+		return shapes.SQUARE
+	}
 }
