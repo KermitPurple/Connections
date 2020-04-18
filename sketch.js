@@ -53,6 +53,7 @@ function update_screen(){
 	}
 	if(connections.type() == shapes.STAR){
 		star_div.style('display', 'block');
+		connections.number_of_star_points = star_point_slider.value();
 	}else{
 		star_div.style('display', 'none');
 	}
