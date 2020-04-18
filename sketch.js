@@ -44,8 +44,9 @@ function mouseDragged(){
 }
 
 function update_screen(){
-	if(frequency_slider.value() != connections.frequency_offset){
-		connections.frequency = frequency_slider.value();
+	let new_freq = 53 - frequency_slider.value()
+	if(new_freq != connections.frequency_offset){
+		connections.frequency = new_freq;
 		connections.get_points();
 	}
 	if(offset_slider.value() != connections.opposite_offset){
