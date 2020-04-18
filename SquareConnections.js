@@ -6,17 +6,18 @@ class SquareConnections extends Connections{
 
 	get_points(){
 		this.points = [];
-		for(let i = 20; i < width; i+= 20){
-			this.points.push(createVector(i, 20))
+		let scl = 50
+		for(let i = scl; i < width; i+= scl){
+			this.points.push(createVector(i, scl))
 		}
-		for(let i = 40; i < height - 20; i+= 20){
-			this.points.push(createVector(width - 20, i))
+		for(let i = 2 * scl; i < height - scl; i+= scl){
+			this.points.push(createVector(width - scl, i))
 		}
-		for(let i = height - 20; i > 20; i -= 20){
-			this.points.push(createVector(i, height - 20))
+		for(let i = height - scl; i > scl; i -= scl){
+			this.points.push(createVector(i, height - scl))
 		}
-		for(let i = height - 20; i > 20 ; i -= 20){
-			this.points.push(createVector(20, i))
+		for(let i = height - scl; i > scl ; i -= scl){
+			this.points.push(createVector(scl, i))
 		}
 	}
 
