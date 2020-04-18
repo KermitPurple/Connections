@@ -5,7 +5,7 @@ const shapes = {
 	NONE: null,
 	SQUARE: "square",
 	CIRCLE: "circle",
-	STAR: "STAR",
+	STAR: "star",
 }
 
 function setup(){
