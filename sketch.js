@@ -12,7 +12,7 @@ function setup(){
 	createCanvas(600, 600).parent('cnvs');
 	stroke(255);
 	createP("Frequency").parent('controls');
-	frequency_slider = createSlider(3, 50, 20);
+	frequency_slider = createSlider(1, 50, 20);
 	frequency_slider.parent('controls');
 	createP("Offset").parent('controls');
 	offset_slider = createSlider(1.1, 5, 2, 0.01);
@@ -44,7 +44,7 @@ function mouseDragged(){
 }
 
 function update_screen(){
-	let new_freq = 53 - frequency_slider.value()
+	let new_freq = 51 - frequency_slider.value()
 	if(new_freq != connections.frequency_offset){
 		connections.frequency = new_freq;
 		connections.get_points();
