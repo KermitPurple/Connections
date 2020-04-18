@@ -19,6 +19,7 @@ p{
 }
 
 button{
+	background: white;
 	font-size: 25px;
 	border-radius: 4px;
 	margin: 10px;
