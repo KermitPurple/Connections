@@ -9,12 +9,12 @@ const shapes = {
 function setup(){
 	createCanvas(600, 600).parent('cnvs');
 	stroke(255);
-	createP("Frequency").parent('controls')
-	frequency_slider = createSlider(1, 20, 2)
-	frequency_slider.parent('controls')
-	createP("Offset").parent('controls')
-	offset_slider = createSlider(1.1, 5, 2, 0.01)
-	offset_slider.parent('controls')
+	createP("Frequency").parent('controls');
+	frequency_slider = createSlider(3, 50, 20);
+	frequency_slider.parent('controls');
+	createP("Offset").parent('controls');
+	offset_slider = createSlider(1.1, 5, 2, 0.01);
+	offset_slider.parent('controls');
 	connections = new SquareConnections();
 }
 
@@ -33,8 +33,13 @@ function mouseDragged(){
 }
 
 function update_screen(){
-	connections.frequency = frequency_slider.value();
-	connections.opposite_offset = offset_slider.value();
+	if(frequency_slider.value() != connections.frequency_offset){
+		connections.frequency = frequency_slider.value();
+		connections.get_points();
+	}
+	if(offset_slider.value() != connections.opposite_offset){
+		connections.opposite_offset = offset_slider.value();
+	}
 	loop();
 }
 

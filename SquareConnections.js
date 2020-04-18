@@ -6,7 +6,7 @@ class SquareConnections extends Connections{
 
 	get_points(){
 		this.points = [];
-		let scl = 50
+		let scl = this.frequency
 		for(let i = scl; i < width; i+= scl){
 			this.points.push(createVector(i, scl))
 		}
