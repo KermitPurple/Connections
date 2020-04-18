@@ -15,7 +15,7 @@ function setup(){
 	createP("Offset").parent('controls')
 	offset_slider = createSlider(2, 10, 2, 0.3)
 	offset_slider.parent('controls')
-	connections = new SquareConnections(20);
+	connections = new SquareConnections();
 }
 
 function draw(){
@@ -25,14 +25,14 @@ function draw(){
 }
 
 function mousePressed(){
-	updateScreen()
+	update_screen()
 }
 
 function mouseDragged(){
-	updateScreen()
+	update_screen()
 }
 
-function updateScreen(){
+function update_screen(){
 	connections.frequency = frequency_slider.value();
 	connections.opposite_offset = offset_slider.value();
 	loop();
@@ -41,5 +41,7 @@ function updateScreen(){
 function swap_shapes(){
 	if(connections.type() == shapes.SQUARE){
 	}else{
+		connections = new SquareConnections();
+		update_screen();
 	}
 }

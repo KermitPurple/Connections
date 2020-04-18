@@ -1,6 +1,6 @@
 class Connections{
-	constructor(frequency){
-		this.frequency = frequency;
+	constructor(){
+		this.frequency = 0;
 		this.opposite_offset = 2
 	}
 
