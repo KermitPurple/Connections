@@ -4,6 +4,7 @@ const shapes = {
 	NONE: null,
 	SQUARE: "square",
 	CIRCLE: "circle",
+	STAR: "STAR",
 }
 
 function setup(){
@@ -20,7 +21,7 @@ function setup(){
 
 function draw(){
 	background(0);
-	if(connections.type() == shapes.CIRCLE){
+	if(connections.type() == shapes.CIRCLE || connections.type() == shapes.STAR){
 		translate(width / 2, height / 2);
 	}
 	connections.draw()
@@ -49,6 +50,8 @@ function update_screen(){
 function swap_shapes(){
 	if(connections.type() == shapes.SQUARE){
 		connections = new CircleConnections();
+	}else if(connections.type() == shapes.CIRCLE){
+		connections = new StarConnections();
 	}else{
 		connections = new SquareConnections();
 	}
