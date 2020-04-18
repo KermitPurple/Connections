@@ -1,6 +1,6 @@
 class SquareConnections extends Connections{
-	constructor(frequency){
-		super(frequency);
+	constructor(){
+		super();
 		this.get_points()
 	}
 
