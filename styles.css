@@ -7,3 +7,19 @@ body{
 #cnvs{
 	display: block;
 }
+
+p{
+	color: white;
+	font-size: 30px;
+	margin: 0;
+}
+
+#controls{
+	text-align:center;
+}
+
+button{
+	font-size: 25px;
+	border-radius: 4px;
+	margin: 10px;
+}
