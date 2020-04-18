@@ -1,6 +1,7 @@
 class Connections{
 	constructor(frequency){
 		this.frequency = frequency;
+		this.opposite_offset = 2
 	}
 
 	draw_points(){
@@ -13,7 +14,7 @@ class Connections{
 	connect_points(){
 		strokeWeight(1);
 		for(let i = 0; i < this.points.length; i++){
-			let opposite_index = (i + int(this.points.length / 2)) % this.points.length
+			let opposite_index = (i + int(this.points.length / this.opposite_offset)) % this.points.length
 			line(this.points[i].x, this.points[i].y, this.points[opposite_index].x, this.points[opposite_index].y)
 		}
 	}

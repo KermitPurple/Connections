@@ -1,6 +1,9 @@
 body{
 	background: black;
+	display: flex;
+	justify-content: center;
 }
 
 #cnvs{
+	display: block;
 }
