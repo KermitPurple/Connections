@@ -1,26 +1,26 @@
 body{
-	background: black;
-	display: flex;
-	justify-content: center;
+    background: black;
+    display: flex;
+    justify-content: center;
 }
 
 #cnvs{
-	display: block;
+    display: block;
 }
 
 p{
-	color: white;
-	font-size: 30px;
-	margin: 0;
+    color: white;
+    font-size: 30px;
+    margin: 0;
 }
 
 #controls{
-	text-align:center;
+    text-align:center;
 }
 
 button{
-	background: white;
-	font-size: 25px;
-	border-radius: 4px;
-	margin: 10px;
+    background: white;
+    font-size: 25px;
+    border-radius: 4px;
+    margin: 10px;
 }
