@@ -24,8 +24,8 @@ function setup(){
 
 function draw(){
 	background(0);
-	if(connections.type() == shapes.CIRCLE || connections.type() == shapes.STAR){
-		translate(width / 2, height / 2);
+    if(connections.type() == shapes.CIRCLE || connections.type() == shapes.STAR){
+        translate(width / 2, height / 2);
 	}
 	connections.draw()
 	noLoop();
