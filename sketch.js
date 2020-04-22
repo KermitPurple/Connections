@@ -12,7 +12,7 @@ function setup(){
     createCanvas(600, 600).parent('cnvs');
     stroke(255);
     createP("Frequency").parent('controls');
-    frequency_slider = createSlider(1, 50, 20).parent('controls');
+    frequency_slider = createSlider(1, 50, 27).parent('controls');
     createP("Offset").parent('controls');
     offset_slider = createSlider(1.1, 5, 2, 0.01).parent('controls');
     star_div = createDiv().parent('controls');
