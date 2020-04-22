@@ -15,11 +15,12 @@ function setup(){
     frequency_slider = createSlider(1, 50, 20).parent('controls');
     createP("Offset").parent('controls');
     offset_slider = createSlider(1.1, 5, 2, 0.01).parent('controls');
-    connections = new SquareConnections();
     star_div = createDiv().parent('controls');
     createP("Points on star").parent(star_div);
     star_point_slider = createSlider(1, 15, 5).parent(star_div);
     star_div.style('display', 'none');
+    connections = new SquareConnections();
+    update_screen()
 }
 
 function draw(){
