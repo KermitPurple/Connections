@@ -1,7 +1,9 @@
 class Connections{
     constructor(){
         this.frequency = 20;
-        this.opposite_offset = 2
+        this.opposite_offset = 2;
+        this.color = color_slider.value();
+        this.is_white = color_checkbox.checked();
     }
 
     draw_points(){
@@ -20,6 +22,11 @@ class Connections{
     }
 
     draw(){
+        if(this.is_white){
+            stroke(255)
+        } else {
+            stroke(this.color, 100, 100);
+        }
         this.draw_points()
         this.connect_points()
     }
