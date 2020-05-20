@@ -15,14 +15,10 @@ function setup(){
     createCanvas(600, 600).parent('cnvs');
     stroke(255);
     colorMode(HSB);
-    createP("Frequency").parent('frequency');
     frequency_slider = createSlider(1, 50, 27).parent('frequency');
-    createP("Offset").parent('offset');
     offset_slider = createSlider(1.1, 5, 2, 0.01).parent('offset');
-    createP("Color").parent('color_div');
     color_checkbox = createCheckbox('White', true).parent('color_div');
     color_slider = createSlider(0, 360, 180, 1).parent("color_div");
-    createP("Points on star").parent("star");
     star_point_slider = createSlider(1, 15, 5).parent('star');
     connections = new SquareConnections();
     update_screen()

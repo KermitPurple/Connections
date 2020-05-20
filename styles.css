@@ -8,9 +8,14 @@ body{
     display: block;
 }
 
-p{
+h1{
     color: white;
     font-size: 30px;
+    margin: 0;
+}
+
+p{
+    font-size: 12px;
     margin: 0;
 }
 
