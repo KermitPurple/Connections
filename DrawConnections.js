@@ -15,6 +15,10 @@ class DrawConnections extends Connections{
         this.points.push(point);
     }
 
+    clear_points(){
+        this.points = []
+    }
+
     type(){
         return shapes.DRAW
     }
