@@ -70,7 +70,7 @@ function update_screen(){
         connections.is_white = false;
         color_slider.style('display', 'inline-block');
     }
-    if(connections.type == shapes.DRAW){
+    if(connections.type() == shapes.DRAW){
         select("#draw").style('display', 'inline-block')
     }else{
         select("#draw").style('display', 'none')
@@ -83,6 +83,8 @@ function swap_shapes(){
         connections = new CircleConnections();
     }else if(connections.type() == shapes.CIRCLE){
         connections = new StarConnections();
+    }else if(connections.type() == shapes.STAR){
+        connections = new DrawConnections();
     }else{
         connections = new SquareConnections();
     }
