@@ -14,19 +14,15 @@ function setup(){
     createCanvas(600, 600).parent('cnvs');
     stroke(255);
     colorMode(HSB);
-    createP("Frequency").parent('controls');
-    frequency_slider = createSlider(1, 50, 27).parent('controls');
-    createP("Offset").parent('controls');
-    offset_slider = createSlider(1.1, 5, 2, 0.01).parent('controls');
-    createP("Color").parent('controls');
-    color_checkbox = createCheckbox('White', true).parent('controls');
-    color_div = createDiv().parent('controls');
-    color_slider = createSlider(0, 360, 180, 1).parent(color_div);
-    color_div.style('display', 'none');
-    star_div = createDiv().parent('controls');
-    createP("Points on star").parent(star_div);
-    star_point_slider = createSlider(1, 15, 5).parent(star_div);
-    star_div.style('display', 'none');
+    createP("Frequency").parent('frequency');
+    frequency_slider = createSlider(1, 50, 27).parent('frequency');
+    createP("Offset").parent('offset');
+    offset_slider = createSlider(1.1, 5, 2, 0.01).parent('offset');
+    createP("Color").parent('color');
+    color_checkbox = createCheckbox('White', true).parent('color');
+    color_slider = createSlider(0, 360, 180, 1).parent("color");
+    createP("Points on star").parent("star");
+    star_point_slider = createSlider(1, 15, 5).parent('star');
     connections = new SquareConnections();
     update_screen()
 }
@@ -58,20 +54,20 @@ function update_screen(){
         connections.opposite_offset = offset_slider.value();
     }
     if(connections.type() == shapes.STAR){
-        star_div.style('display', 'block');
+        select('#star').style('display', 'block');
         connections.number_of_star_points = star_point_slider.value();
     }else{
-        star_div.style('display', 'none');
+        select('#star').style('display', 'none');
     }
     if(connections.color != color_slider.value()){
         connections.color = color_slider.value();
     }
     if(color_checkbox.checked()){
         connections.is_white = true;
-        color_div.style('display', 'none');
+        color_slider.style('display', 'none');
     }else{
         connections.is_white = false;
-        color_div.style('display', 'block');
+        color_slider.style('display', 'inline-block');
     }
     loop();
 }
