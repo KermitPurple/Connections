@@ -72,8 +72,10 @@ function update_screen(){
     }
     if(connections.type() == shapes.DRAW){
         select("#draw").style('display', 'inline-block')
+        select("#frequency").style('display', 'none')
     }else{
         select("#draw").style('display', 'none')
+        select("#frequency").style('display', 'inline-block')
     }
     loop();
 }
